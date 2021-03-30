@@ -76,7 +76,7 @@ class WeatherFactory {
     String url = _buildUrl(tag, cityName, lat, lon);
 
     /// Send HTTP get response with the url
-    http.Response response = await http.get(url);
+    http.Response response = await http.get(Uri.parse(url));
 
     /// Perform error checking on response:
     /// Status code 200 means everything went well
